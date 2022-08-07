@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -16,32 +16,27 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | Manage landing page</title>
-    <style>
-      /* .attribution { font-size: 11px; text-align: center; } */
-      /* .attribution a { color: hsl(228, 45%, 44%); } */
-    </style>
   </head>
   <body>
-    <header class="container">
+    <header class="header container">
+      <a href="#" class="header__logo"
+        ><img src="./images/logo.svg" alt="logo"
+      /></a>
       <nav class="nav">
-        <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
         <button class="hamburger">
           <div class="hamburger__box">
             <span class="hamburger__inner"></span>
           </div>
         </button>
-        <ul class="nav__list disabled">
-          <li>
-            <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
-          </li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Community</a></li>
-          <li><button class="btn--primary">Get Started</button></li>
+        <ul class="nav__list">
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Community</a></li>
         </ul>
       </nav>
+      <button class="btn">Get Started</button>
     </header>
 
     <section class="intro container">
@@ -51,7 +46,7 @@
           Manage makes it simple for software teams to plan day-to-day tasks
           while keeping the larger team goals in view.
         </p>
-        <button class="btn--primary">Get Started</button>
+        <button class="btn">Get Started</button>
       </div>
       <div class="intro__imgs">
         <img src="./images/illustration-intro.svg" alt="" />
@@ -133,13 +128,13 @@
           motivated.”
         </p>
       </div>
-      <button class="btn--primary">Get Started</button>
+      <button class="btn">Get Started</button>
     </section>
 
     <section class="reminder">
       <div class="container">
         <h2>Simplify how your team works today.</h2>
-        <button class="btn--primary btn--reverse">Get Started</button>
+        <button class="btn btn--reverse">Get Started</button>
       </div>
     </section>
 
@@ -150,7 +145,7 @@
           type="email"
           placeholder="Updates in your inbox… "
         />
-        <button class="btn--primary" type="submit">Go</button>
+        <button class="btn" type="submit">Go</button>
       </form>
       <ul class="footer__list container">
         <li>Home</li>
