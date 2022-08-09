@@ -130,34 +130,6 @@ h2, h3 ,h4, h5 {
     box-shadow: none;
 }
 
-/* navigation */
-
-
-.mobile-nav-toggle .icon-close {
-    display: none;
-}
-
-.mobile-nav-toggle {
-    display: none;
-}
-
-@media (max-width: 767px) {
-    .nav {
-        display: none;
-    }
-    .nav__btn {
-        display: none;
-    }
-    .mobile-nav-toggle {
-        display: block;
-        border: none;
-        padding: .5em;
-        background-color: transparent;
-    }
-}
-
-
-
 .disabled {
     display: none;
 }
@@ -183,4 +155,10 @@ h2, h3 ,h4, h5 {
 
 .glide__bullet--active {
     background-color: black !important;
+}
+
+@media (max-width: 767px) {
+    .display-none-sm {
+        display: none;
+    }
 }

@@ -3,14 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 2.6rem;
+    padding: 4rem 0;
 }
 
-.nav__list {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
+@media (max-width: 767px) {
+    .header {
+    padding: 4rem 2.6rem;
+    }
 }
+
 @media (min-width: 768px) {
     .nav {
     display: flex;
@@ -23,15 +24,73 @@
     }
 
 }
-@media (min-width: 1110px) {
+
+/* navigation */
+
+.nav__list {
+    display: flex;
+    /* justify-content: c; */
+    list-style-type: none;
+    gap: clamp(.2em, 5vw, 2rem);
+    /* margin-inline: 1rem; */
+}
+
+
+.mobile-nav-toggle .icon-close {
+    display: none;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        display: none;
+        position: absolute;
+        background-color: black;
+        /* top left&right bottom */
+        inset: 9rem 2rem auto;
+        border-radius: .5rem;
+    }
+    .header[data-overlay]::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / .5));
+    }
     .nav__list {
-        gap: 3rem;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.4rem;
+        padding: 4rem 0;
+        font-weight: var(--fw-bold);
+    }
+    
+    .nav__list a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav[data-visible] {
+        display: block;
+    }
+    .nav__btn {
+        display: none;
+    }
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 100;
+        border: none;
+        padding: .5em;
+        background-color: transparent;
     }
 }
 
 .nav a {
     text-decoration: none;
-    color: var(--blue-900);
+    /* color: var(--blue-900); */
 }
 
 .nav a:hover,
@@ -136,9 +195,6 @@
     .about__heading p {
         width: 70%;
     }
-    .about__card {
-        /* flex-direction: row; */
-    }
 }
 
 
@@ -185,11 +241,6 @@
 
 .reminder button {
     margin-top: 3rem;
-}
-
-.reminder__text {
-    /* display: flex; */
-    /* align-items: center; */
 }
 
 @media (min-width: 992px) {
@@ -249,10 +300,6 @@ footer form {
     /* justify-self: center; */
     text-align: center;
     padding: 1rem 0;
-}
-
-.footer__logo {
-    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); */
 }
 
 /* media-queries */

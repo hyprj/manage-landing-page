@@ -23,7 +23,8 @@
       rel="stylesheet"
       href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
     />
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script defer src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script defer src="./index.js"></script>
     <title>Frontend Mentor | Manage landing page</title>
   </head>
 
@@ -50,7 +51,7 @@
           <li><a href="#">Community</a></li>
         </ul>
       </nav>
-      <button class="btn nav__btn">Get Started</button>
+      <button class="btn nav__btn display-none-sm">Get Started</button>
     </header>
 
     <section class="intro container">
@@ -193,8 +194,5 @@
       </ul>
       <img src="./images/logo.svg" alt="logo" class="footer__logo" />
     </footer>
-    <script>
-      new Glide(".glide").mount();
-    </script>
   </body>
 </html>
