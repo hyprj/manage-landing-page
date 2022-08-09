@@ -6,32 +6,23 @@
     padding: 4rem 2.6rem;
 }
 
-.header__logo {
-    flex-basis: 15%;
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
 }
-
-@media (min-width: 900px) {
-    .header__logo {
-        flex-basis: auto;
-    }
-}
-.nav {
-    display: none;
-}
-
 @media (min-width: 768px) {
     .nav {
     display: flex;
     align-items: center;
     }
 }
+@media (min-width: 900px) {
+    .header__logo {
+        flex-basis: auto;
+    }
 
-.nav__list {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
 }
-
 @media (min-width: 1110px) {
     .nav__list {
         gap: 3rem;
@@ -57,11 +48,12 @@
     text-align: center;
 }
 
-.intro__text h2 {
+.intro h2 {
+    font-size: var(--fs-heading-primary);
     margin-bottom: 1.6rem;
 }
 
-.intro__text p {
+.intro p {
     margin-bottom: 2.2rem;
 }
 
@@ -92,13 +84,14 @@
     margin-top: 6rem;
 }
 
+.about h3 {
+    font-size: var(--fs-heading-primary);
+    margin-bottom: 2rem;
+}
+
 .about__heading {
     text-align: center;
     margin-bottom: 6rem;
-}
-
-.about__heading h3 {
-    margin-bottom: 2rem;
 }
 
 .about__number {
@@ -156,15 +149,22 @@
 .opinion {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     margin: 3rem 0;
     gap: 2rem;
 }
 
 .opinion img {
-    /* flex-basis: 10%; */
     width: 20%;
+}
+
+.opinions__bullets {
+    /* margin: 2rem 0; */
+    bottom: -1rem !important;
+}
+
+.opinions__btn {
+    margin-top: 3rem;
 }
 
 /* reminder */
@@ -172,16 +172,41 @@
 .reminder {
     text-align: center;
     margin-top: 5rem;
-    padding: 2rem 0;
+    padding: 5rem 0;
     background-color: var(--red-400);
 }
 
 .reminder h2 {
+    font-size: var(--fs-heading-primary);
     color: #fff;
+    /* width: 40%; */
+    /* width: 20rem; */
 }
 
 .reminder button {
-    margin: 3rem 0;
+    margin-top: 3rem;
+}
+
+.reminder__text {
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+@media (min-width: 992px) {
+    .reminder {
+        text-align: left;
+    }
+    .reminder__text {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;   
+    }
+    .reminder h2 {
+        max-width: 60rem;
+    }
+    .reminder button {
+        margin: 0;
+    }
 }
 
 /* footer */
@@ -224,6 +249,10 @@ footer form {
     /* justify-self: center; */
     text-align: center;
     padding: 1rem 0;
+}
+
+.footer__logo {
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); */
 }
 
 /* media-queries */
